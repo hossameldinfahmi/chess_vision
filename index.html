@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Chess Vision</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="viewport">
+            <h1 id="vision">Vission
+                <i class="fa-regular fa-crosshairs-simple"></i>
+            </h1>
+            <div class="row">
+                <div class="image">
+                    <img src="./profile.jpeg">
+                </div>
+
+                <div id="score">0</div>
+                <div id="timer">
+                    0:00
+                </div>
+            </div>
+
+
+            <ul id="wrongAns" class="wrongAns">
+                
+            </ul>
+
+            <button id="startBtn" onclick="startGame()">Start</button>
+        </div>
+
+        <div class="chessboard" id="chessboard">
+            <div id="popWorng">
+                <h1 id="popWorngheading"></h1>
+            </div>
+            <!-- 1st -->
+            <div class="white a8" id="a8">
+                <span>8</span>
+            </div>
+            <div class="black b8" id="b8"></div>
+            <div class="white c8" id="c8"></div>
+            <div class="black d8" id="d8"></div>
+            <div class="white e8" id="e8"></div>
+            <div class="black f8" id="f8"></div>
+            <div class="white g8" id="g8"></div>
+            <div class="black h8" id="h8"></div>
+            <!-- 2nd -->
+            <div class="black a7" id="a7">
+                <span>7</span>
+            </div>
+            <div class="white b7" id="b7"></div>
+            <div class="black c7" id="c7"></div>
+            <div class="white d7" id="d7"></div>
+            <div class="black e7" id="e7"></div>
+            <div class="white f7" id="f7"></div>
+            <div class="black g7" id="g7"></div>
+            <div class="white h7" id="h7"></div>
+            <!-- 3th -->
+            <div class="white a6" id="a6">
+                <span>6</span>
+            </div>
+            <div class="black b6" id="b6"></div>
+            <div class="white c6" id="c6"></div>
+            <div class="black d6" id="d6"></div>
+            <div class="white e6" id="e6"></div>
+            <div class="black f6" id="f6"></div>
+            <div class="white g6" id="g6"></div>
+            <div class="black h6" id="h6"></div>
+            <!-- 4st -->
+            <div class="black a5" id="a5">
+                <span>5</span>
+            </div>
+            <div class="white b5" id="b5"></div>
+            <div class="black c5" id="c5"></div>
+            <div class="white d5" id="d5"></div>
+            <div class="black e5" id="e5"></div>
+            <div class="white f5" id="f5"></div>
+            <div class="black g5" id="g5"></div>
+            <div class="white h5" id="h5"></div>
+            <!-- 5th -->
+            <div class="white a4" id="a4">
+                <span>4</span>
+            </div>
+            <div class="black b4" id="b4"></div>
+            <div class="white c4" id="c4"></div>
+            <div class="black d4" id="d4"></div>
+            <div class="white e4" id="e4"></div>
+            <div class="black f4" id="f4"></div>
+            <div class="white g4" id="g4"></div>
+            <div class="black h4" id="h4"></div>
+            <!-- 6th -->
+            <div class="black a3" id="a3">
+                <span>3</span>
+            </div>
+            <div class="white b3" id="b3"></div>
+            <div class="black c3" id="c3"></div>
+            <div class="white d3" id="d3"></div>
+            <div class="black e3" id="e3"></div>
+            <div class="white f3" id="f3"></div>
+            <div class="black g3" id="g3"></div>
+            <div class="white h3" id="h3"></div>
+            <!-- 7th -->
+            <div class="white a2" id="a2">
+                <span>2</span>
+            </div>
+            <div class="black b2" id="b2"> </div>
+            <div class="white c2" id="c2"> </div>
+            <div class="black d2" id="d2"> </div>
+            <div class="white e2" id="e2"> </div>
+            <div class="black f2" id="f2"> </div>
+            <div class="white g2" id="g2"> </div>
+            <div class="black h2" id="h2"> </div>
+            <!-- 8th -->
+            <div class="black a1" id="a1">
+                <span>8</span>
+                <div>a</div>
+            </div>
+            <div class="white b1" id="b1">
+                <div>b</div>
+            </div>
+            <div class="black c1" id="c1">
+                <div>c</div>
+            </div>
+            <div class="white d1" id="d1">
+                <div>d</div>
+            </div>
+            <div class="black e1" id="e1">
+                <div>e</div>
+            </div>
+            <div class="white f1" id="f1">
+                <div>f</div>
+            </div>
+            <div class="black g1" id="g1">
+                <div>g</div>
+            </div>
+            <div class="white h1" id="h1">
+                <div>h</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
